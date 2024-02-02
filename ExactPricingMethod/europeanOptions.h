@@ -22,4 +22,8 @@ public:
 	double calcCallOptionPrice(double T, double K, double sig, double r, double S, double b) override;
 	double calcPutOptionPrice(double T, double K, double sig, double r, double S, double b) override;
 
+	double calcGamma(double T, double K, double sig, double r, double S, double b); // Gamma for call and put is the same
+	double calcCallDelta(double T, double K, double sig, double r, double S, double b);
+	double calcPutDelta(double T, double K, double sig, double r, double S, double b);
+
 };

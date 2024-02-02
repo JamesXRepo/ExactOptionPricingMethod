@@ -32,3 +32,22 @@ double europeanOptions::calcPutOptionPrice(double T, double K, double sig, doubl
 	double putPrice = K * exp(-r * T) * cdf(complement(standardNormal, d2)) - S * exp((b - r) * T) * cdf(complement(standardNormal, d1));
 	return putPrice;
 }
+
+double europeanOptions::calcGamma(double T, double K, double sig, double r, double S, double b) {
+	double gamma = exp((b - r) * T) * pdf(standardNormal, this->d1) / (S * sig * sqrt(T));
+
+	return gamma;
+}
+
+double europeanOptions::calcCallDelta(double T, double K, double sig, double r, double S, double b) {
+	double delta = exp((b - r) * T) * cdf(standardNormal, this->d1);
+
+	return delta;
+
+}
+
+double europeanOptions::calcPutDelta(double T, double K, double sig, double r, double S, double b) {
+	double delta = exp((b - r) * T) * (cdf(standardNormal, this->d1) - 1.0);
+
+	return delta;
+}
