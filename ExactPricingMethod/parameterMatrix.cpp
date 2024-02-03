@@ -12,14 +12,14 @@ void parametersMatrix::setParameterRange(Range T, Range K, Range sig, Range r, R
 	this->S = S;
 }
 
-void parametersMatrix::calcCallOptionPrice(europeanOptions& obj) {
+void parametersMatrix::calcOptionPrice(europeanOptions& obj, FunctionPtr func) {
 	for (double TT = this->T.start; TT <= this->T.end; TT += this->T.step) {
 		for (double KK = this->K.start; KK <= this->K.end; KK += this->K.step) {
 			for (double sigg = this->sig.start; sigg <= this->sig.end; sigg += this->sig.step) {
 				for (double rr = this->r.start; rr <= this->r.end; rr += this->r.step) {
 					for (double SS = this->S.start; SS <= this->S.end; SS += this->S.step) {
 						b = rr;
-						this->optionPrices.emplace_back(std::vector<double>{TT, KK, sigg, SS, rr, b, obj.calcCallOptionPrice(TT, KK, sigg, rr, SS, b)});
+						this->optionPrices.emplace_back(std::vector<double>{TT, KK, sigg, SS, rr, b, (obj.*func)(TT, KK, sigg, rr, SS, b)});
 					}
 				}
 			}

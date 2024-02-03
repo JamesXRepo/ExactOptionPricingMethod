@@ -18,7 +18,7 @@ int main() {
 	Range S{ 60,120,60 };
 
 	paraMatrix.setParameterRange(T, K, sig, r, S);
-	paraMatrix.calcCallOptionPrice(euroOption);
+	paraMatrix.calcOptionPrice(euroOption, &europeanOptions::calcPutOptionPrice);
 	paraMatrix.printOptionPrice();
 
 	return 0;

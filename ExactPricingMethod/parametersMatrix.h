@@ -10,6 +10,8 @@ using std::cin;
 using std::cout;
 using std::endl;
 
+typedef double (europeanOptions::*FunctionPtr)(double, double, double, double, double, double);
+
 class parametersMatrix
 {
 private:
@@ -29,13 +31,8 @@ public:
 	~parametersMatrix();
 	
 	void setParameterRange(Range T, Range K, Range sig, Range r, Range S);
-
-	void calcCallOptionPrice(europeanOptions& obj);
-
+	void calcOptionPrice(europeanOptions& obj, FunctionPtr func);
 	void printOptionPrice() const;
-
-
-
 
 };
 
