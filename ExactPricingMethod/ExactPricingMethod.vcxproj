@@ -134,8 +134,10 @@
   <ItemGroup>
     <ClCompile Include="europeanOptions.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="parameterMatrix.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="dataStructure.h" />
     <ClInclude Include="europeanOptions.h" />
     <ClInclude Include="option.h" />
     <ClInclude Include="parametersMatrix.h" />
