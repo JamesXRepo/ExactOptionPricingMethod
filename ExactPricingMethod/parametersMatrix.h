@@ -5,6 +5,7 @@
 
 #include <vector>
 #include <cmath>
+#include <string>
 
 using std::cin;
 using std::cout;
@@ -14,25 +15,31 @@ typedef double (europeanOptions::*FunctionPtr)(double, double, double, double, d
 
 class parametersMatrix
 {
-private:
-	std::vector<double> parameter;
-	std::vector<std::vector<double>> optionPrices;
+	private:
+		std::vector<double> parameter;
+		std::vector<std::vector<double>> optionPrices;
+		std::string metricName;
 
-	Range T;
-	Range K;
-	Range sig;
-	Range r;
-	Range S;
-	double b;
+		europeanOptions euroOption;
 
-public:
+		Range T;
+		Range K;
+		Range sig;
+		Range r;
+		Range S;
+		double b;
 
-	parametersMatrix();
-	~parametersMatrix();
+		void printRangeValues();
+
+	public:
+
+		parametersMatrix();
+		~parametersMatrix();
 	
-	void setParameterRange(Range T, Range K, Range sig, Range r, Range S);
-	void calcOptionPrice(europeanOptions& obj, FunctionPtr func);
-	void printOptionPrice() const;
+		void setParameterRange();
+		void calcOptionMetric();
+		void paramCalcOptionMetrics(europeanOptions& obj, FunctionPtr func);
+		void printOptionPrice();
 
 };
 

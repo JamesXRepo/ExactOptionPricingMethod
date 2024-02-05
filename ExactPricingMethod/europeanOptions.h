@@ -15,6 +15,8 @@ private:
 	double calcD1(double T, double K, double sig, double r, double S, double b);
 	double calcD2(double T, double K, double sig, double r, double S, double b);
 
+
+
 public:
 	europeanOptions();
 	~europeanOptions();
