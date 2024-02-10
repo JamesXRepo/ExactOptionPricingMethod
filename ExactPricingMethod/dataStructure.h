@@ -1,3 +1,6 @@
+/*
+Contains the range struct that is used acrossed multiple claseses
+*/
 #pragma once
 
 struct Range {
