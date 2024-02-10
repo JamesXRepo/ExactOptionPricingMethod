@@ -8,19 +8,14 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-int main() {
+void run() {
 	parametersMatrix paraMatrix;
-
-	/*
-	Range T{ .25, 0.5, 0.25 };
-	Range K{ 65, 130, 65 };
-	Range sig{ 0.3, 0.6, 0.3 };
-	Range r{ 0.08, 0.16, 0.08 };
-	Range S{ 60,120,60 };
-	*/
-
 	paraMatrix.setParameterRange();
 	paraMatrix.calcOptionMetric();
+}
+
+int main() {
+	run();
 	
 	return 0;
 }

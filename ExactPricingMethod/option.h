@@ -1,3 +1,6 @@
+/*
+Base class for calculating call and put options for European and American Optio Prices
+*/
 #pragma once
 class Option
 {
