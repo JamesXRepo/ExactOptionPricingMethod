@@ -8,6 +8,7 @@ The Exact Option Pricing Method project is a C++ implementation for calculating 
 ![image](https://github.com/JamesXRepo/ExactOptionPricingMethod/assets/14869030/53be31a4-8e6e-4202-ac84-215f03b24a72)
 
 ![image](https://github.com/JamesXRepo/ExactOptionPricingMethod/assets/14869030/582558a7-7edf-4da1-8162-a4d926d2c156)
+
 ![image](https://github.com/JamesXRepo/ExactOptionPricingMethod/assets/14869030/7b07f541-13d8-46f6-96be-63ce587131cf)
 
 ## Features
