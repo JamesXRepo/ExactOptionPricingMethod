@@ -12,4 +12,4 @@ The Exact Option Pricing Method project is a C++ implementation for calculating 
 - Parameterized option pricing with customizable ranges for Time, Strike Price, Volatility, Risk-free Rate, and Underlying Asset Price
 
 ## Usage
--In Progress
+-Run ExactPricingMethod.exe
